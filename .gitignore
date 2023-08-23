@@ -7,4 +7,6 @@
 /spring-boot-vaadin/package.json
 /spring-boot-vaadin/tsconfig.json
 /spring-boot-vaadin/types.d.ts
-
+/spring-boot-vaadin/package-lock.json
+/spring-boot-vaadin/vite.config.ts
+/spring-boot-vaadin/vite.generated.ts
