@@ -1,2 +1,10 @@
 /practice-room.iml
 /.idea/
+/*/target/
+/spring-boot-vaadin/spring-boot-vaadin.iml
+/spring-boot-vaadin/node_modules/
+/spring-boot-vaadin/frontend/
+/spring-boot-vaadin/package.json
+/spring-boot-vaadin/tsconfig.json
+/spring-boot-vaadin/types.d.ts
+
