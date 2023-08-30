@@ -7,10 +7,12 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
+import javax.annotation.security.PermitAll;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@PermitAll
 @Route(value = "users", layout = MainLayout.class)
 @PageTitle("Users | Practice room")
 public class UserView extends VerticalLayout {
