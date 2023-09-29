@@ -21,4 +21,8 @@ public class UserService {
 
         return newUser.getUid();
     }
+
+    public User getUser(String uid) {
+        return USERS.stream().filter(u -> u.getUid().equals(uid)).findFirst().orElse(null);
+    }
 }
