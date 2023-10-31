@@ -30,11 +30,12 @@ public class UserService {
     }
 
     public UserEntity getUser(Long id) {
-        return userRepository.findById(id).orElseThrow();
-    }
-
-    public UserEntity findUserByName(String name) {
-        return userRepository.findUserEntityByName(name).orElseThrow();
+        var user = userRepository.findById(id);
+        user.ifPresent(userEntity -> {
+            var comments = commentRepository.findAllByAuthor(userEntity);
+            userEntity.setComments(comments);
+        });
+        return user.orElseThrow();
     }
 
     public void addComment(UserEntity user, String commentText) {

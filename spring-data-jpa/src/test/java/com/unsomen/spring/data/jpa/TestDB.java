@@ -18,10 +18,6 @@ public class TestDB {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private UserRepository userRepository;
-    @Autowired
-    private CommentRepository commentRepository;
 
     @Test
     public void createUserTest() {
@@ -47,7 +43,7 @@ public class TestDB {
         Assertions.assertNotNull(user);
 
         userService.addComment(user, "test-comment");
-        user = userRepository.findUserEntityByName("test_user_3").orElseThrow();
+        user = userService.getUser(userId);
         Assertions.assertNotNull(user.getComments());
         Assertions.assertFalse(user.getComments().isEmpty());
     }
